@@ -1,0 +1,6 @@
+#root {
+    display: block;
+    position: absolute;
+    width: max-content;
+    background-color: azure;
+}
