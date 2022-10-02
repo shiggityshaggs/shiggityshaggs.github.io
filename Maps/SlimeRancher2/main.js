@@ -24,6 +24,6 @@ let map = new ol.Map({
 })
 
 map.on('pointermove', evt => {
-    let coords = `${evt.coordinate[0].toFixed(0)},${evt.coordinate[0].toFixed(1)}`;
+    let coords = `${evt.coordinate[0].toFixed(0)},${evt.coordinate[1].toFixed(0)}`;
     divCoords.innerHTML = coords;
 });
