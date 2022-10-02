@@ -8,7 +8,7 @@ let view = new ol.View({
 	zoom: 16,
 	maxZoom: 20,
 	minZoom: 16
-})
+});
 
 let attribution = new ol.control.Attribution({
 	collapsible: true,
@@ -21,9 +21,15 @@ let map = new ol.Map({
     view: view,
     layers: [ World ],
     loadend: console.log('map.loadend')
-})
+});
 
 map.on('pointermove', evt => {
     let coords = `${evt.coordinate[0].toFixed(0)},${evt.coordinate[1].toFixed(0)}`;
     divCoords.innerHTML = coords;
+});
+
+window.addEventListener('load', () => {
+	let loading = document.getElementById("loading");
+	loading.parentNode.removeChild(loading);
+    console.log('main.js')
 });
