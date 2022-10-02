@@ -1,4 +1,5 @@
-let extent = [-1218.72688869863032,-1230.90601862152948,1220.07962325648305,1207.90049333358388];
+const extent = [-1218.72688869863032,-1230.90601862152948,1220.07962325648305,1207.90049333358388];
+const divCoords = document.getElementById('coordinates');
 
 let view = new ol.View({
     extent: extent,
@@ -21,3 +22,8 @@ let map = new ol.Map({
     layers: [ World ],
     loadend: console.log('map.loadend')
 })
+
+map.on('pointermove', evt => {
+    let coords = `${evt.coordinate[0].toFixed(0)},${evt.coordinate[0].toFixed(1)}`;
+    divCoords.innerHTML = coords;
+});
