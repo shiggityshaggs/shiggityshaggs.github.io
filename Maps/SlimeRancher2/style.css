@@ -62,3 +62,11 @@ html, body {
 .hoverIcon {
     width: 1em;
 }
+
+.hoverName {
+    color: #0099FF;
+}
+
+.hoverCount {
+    color: #FF9900;
+}
