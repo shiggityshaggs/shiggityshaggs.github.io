@@ -42,24 +42,18 @@ function HoverHandler(evt) {
     outArr.length = 0;
     
     map.forEachFeatureAtPixel(evt.pixel, feature => {
-    // if (!fc.hasFeature(feature)) {
-        // fc.addFeature(feature);
+    if (!fc.hasFeature(feature)) {
+        fc.addFeature(feature);
         let props = feature.getProperties();
         obj[props.itemName] = obj[props.itemName] == undefined ? 1 : obj[props.itemName]++;
-    // }
+    }
     })
 
-    for (o in obj) {
+    fc.forEachFeature(feature => {
         let props = feature.getProperties();
         let img = `<img class="hoverIcon" src="${IconPath}${props.itemIcon}.png">`
-        outArr.push(`<div>${img} ${props.itemName} ${obj[o]}</div>`);
-        delete obj[o];
-    }
-
-
-    // fc.forEachFeature(feature => {
-
-    // });
+        outArr.push(`<div>${img} ${props.itemName} ${obj[props.itemName]}</div>`);
+    });
     document.getElementById('list').innerHTML = outArr.join('');
 }
 
