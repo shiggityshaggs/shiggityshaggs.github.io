@@ -1,6 +1,6 @@
 const extent = [-1218.72688869863032,-1230.90601862152948,1220.07962325648305,1207.90049333358388];
 const divCoords = document.getElementById('coordinates');
-const hoverOffset = 5;
+const hoverOffset = 15;
 
 let view = new ol.View({
     extent: extent,
