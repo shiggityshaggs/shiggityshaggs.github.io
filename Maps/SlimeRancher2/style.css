@@ -58,3 +58,7 @@ html, body {
     width: max-content;
     height: fit-content;
 }
+
+.hoverIcon {
+    width: 1em;
+}
