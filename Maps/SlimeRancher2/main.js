@@ -55,10 +55,11 @@ function HoverHandler(evt) {
     }))
 
     let arr = new Array();
+    let name = props.hasOwnProperty('itemName') ? props.itemName : feature.get('name');
     fc.forEachFeature(feature => {
         let props = feature.getProperties();
         let img = `<img class="hoverIcon" src="${IconPath}${props.itemIcon}.png">`
-        arr.push(`<div>${img}${props.itemName}</div>`);
+        arr.push(`<div>${img}${name}</div>`);
     });
     document.getElementById('list').innerHTML = arr.join('');
 }
