@@ -56,7 +56,7 @@ function HoverHandler(evt) {
     for (o in obj) {
         let img = `<img class="hoverIcon" src="${IconPath}${obj[o].itemIcon}.png">`
         let name = `<span class="hoverName">${o}</span>`;
-        let qty = obj[o].count > 1 ? `x<span class="hoverCount">${obj[o].count}</span>` : '';
+        let qty = obj[o].count > 1 ? `<span class="hoverCountX">x</span><span class="hoverCount">${obj[o].count}</span>` : '';
         outArr.push(`<div>${img} ${name} ${qty}</div>`);
     }
 
