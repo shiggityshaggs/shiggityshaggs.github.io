@@ -111,6 +111,6 @@ function featureStyle(feature) {
 }
 
 let POI_Group = new ol.layer.Group({
-    layers: [ POI_Fields ], //, POI_Gorge, POI_Strand ],
+    layers: [ POI_Fields, POI_Gorge, POI_Strand ],
     zIndex: zPOI,
 });
