@@ -19,7 +19,7 @@ let map = new ol.Map({
     controls: ol.control.defaults({attribution: false}).extend([attribution]),
     target: 'map',
     view: view,
-    layers: [ World, POI_Group, featureCollection ],
+    layers: [ World, POI_Group ],
     loadend: console.log('map.loadend')
 });
 
