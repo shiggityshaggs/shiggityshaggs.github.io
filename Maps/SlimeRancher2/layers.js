@@ -1,5 +1,11 @@
+const zWorld = 5;
+const zPOI = 10;
+const zFeatures = 15;
+const IconPath = './Images/Icons_128/';
+const IconMissing = 'unknownIcon';
+
 let World = new ol.layer.Tile({
-    zIndex: 1,
+    zIndex: zWorld,
     title: 'World',
     updateWhileAnimating: true,
     updateWhileInteracting: true,
@@ -19,3 +25,90 @@ let World = new ol.layer.Tile({
         },
     })
 });
+
+let POI_Fields = new ol.layer.Vector({
+    title: 'POI_Fields',
+    zIndex: zPOI,
+    visible: true,
+    updateWhileAnimating: false,
+    updateWhileInteracting: false,
+    postrender: console.log('POI.postrender'),
+    source: new ol.source.Vector({
+        attributions: [ `` ],
+        featuresloadend: console.log('POI.featuresloadend'),
+        url: `./GeoJSON/POI_Fields.geojson`,
+        format: new ol.format.GeoJSON({
+            dataProjection:'pixels',
+            featureProjection:'pixels',
+        }),
+    }),
+    style: function(feature) {
+        return featureStyle(feature);
+    }
+});
+
+let POI_Gorge = new ol.layer.Vector({
+    title: 'POI_Gorge',
+    zIndex: zPOI,
+    visible: true,
+    updateWhileAnimating: false,
+    updateWhileInteracting: false,
+    postrender: console.log('POI.postrender'),
+    source: new ol.source.Vector({
+        attributions: [ `` ],
+        featuresloadend: console.log('POI.featuresloadend'),
+        url: `./GeoJSON/POI_Gorge.geojson`,
+        format: new ol.format.GeoJSON({
+            dataProjection:'pixels',
+            featureProjection:'pixels',
+        }),
+    }),
+    style: function(feature) {
+        return featureStyle(feature);
+    }
+});
+
+let POI_Strand = new ol.layer.Vector({
+    title: 'POI_Strand',
+    zIndex: zPOI,
+    visible: true,
+    updateWhileAnimating: false,
+    updateWhileInteracting: false,
+    postrender: console.log('POI.postrender'),
+    source: new ol.source.Vector({
+        attributions: [ `` ],
+        featuresloadend: console.log('POI.featuresloadend'),
+        url: `./GeoJSON/POI_Strand.geojson`,
+        format: new ol.format.GeoJSON({
+            dataProjection:'pixels',
+            featureProjection:'pixels',
+        }),
+    }),
+    style: function(feature) {
+        return featureStyle(feature);
+    }
+});
+
+function featureStyle(feature) {
+    let name = feature.get('name');
+    let icon = IconMissing;
+    let zIndex = zFeatures;
+
+    // for (i in ItemData) {
+    //     let rx = new RegExp(i, 'i');
+    //     if (name.match(rx) != null) {
+    //         icon = ItemData[i].icon;
+    //         zIndex = ItemData[i].zIndex;
+    //     }
+    // }
+
+    let style = new ol.style.Style({
+        zIndex: zIndex,
+        image: new ol.style.Icon({
+            src: `${IconPath}${icon}.png`,
+            scale: 0.2,
+            opacity: 0.8,
+        })
+    });
+    return style;
+}
