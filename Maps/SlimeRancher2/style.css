@@ -48,3 +48,13 @@ html, body {
 .ol-attribution {
 	margin-right: 2.5vh;
 }
+
+#list {
+    z-index: 1000;
+    display: block;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: max-content;
+    height: fit-content;
+}

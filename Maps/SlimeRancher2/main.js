@@ -19,14 +19,45 @@ let map = new ol.Map({
     controls: ol.control.defaults({attribution: false}).extend([attribution]),
     target: 'map',
     view: view,
-    layers: [ World, POI_Group ],
+    layers: [ World, POI_Group, featureCollection ],
     loadend: console.log('map.loadend')
 });
 
 map.on('pointermove', evt => {
     let coords = `${evt.coordinate[0].toFixed(0)},${evt.coordinate[1].toFixed(0)}`;
     divCoords.innerHTML = coords;
+    HoverHandler(evt);
 });
+
+let featureCollection = new ol.layer.Vector({
+    source: new ol.source.Vector()
+});
+
+function HoverHandler(evt) {
+    let fc = featureCollection.getSource();
+    fc.clear();
+
+    map.forEachFeatureAtPixel(evt.pixel, (feature => {
+    if (!fc.hasFeature(feature)) {
+        let name = feature.get('name');
+
+        for (key in ItemData) {
+            if (name.startsWith(key)) {
+                feature.set('name', ItemData[key].name);
+            }
+        }
+
+        fc.addFeature(feature);
+    }
+    }))
+
+    let arr = new Array();
+    fc.forEachFeature(feature => {
+        let name = feature.get('name');
+        arr.push(name);
+    });
+    document.getElementById('list').innerHTML = arr.join('<br>');
+}
 
 window.addEventListener('load', () => {
 	let loading = document.getElementById("loading");
