@@ -78,7 +78,7 @@ let ItemData = {
     'treasurePod Rank2 MediumRedAshwood'        : { name: 'Medium Red Ashwood', icon: 'iconTreasurePod', zIndex: 50, hoverIcon: 'iconDecorMediumRedAshwood' },
     'treasurePod Rank2 Stalagmite'              : { name: 'Stalagmite', icon: 'iconTreasurePod', zIndex: 50, hoverIcon: 'iconDecorStalagmite' },
     'treasurePod Rank2 TallMagmaClump'          : { name: 'Tall Magma Clump', icon: 'iconTreasurePod', zIndex: 50, hoverIcon: 'iconDecorTallMagmaClump' },
-    'treasurePod Rank3 AzureGlowShroom'         : { name: 'Azure Glow Shroom', icon: 'iconTreasurePod', zIndex: 50, hoverIcon: 'iconDecorAzureGlowShroom' },
+    'treasurePod Rank3 AzureGlowShroom'         : { name: 'Azure Glow Shroom', icon: 'iconTreasurePod', zIndex: 50, hoverIcon: 'iconDecorAzureGlowShrooms' },
     'treasurePod Rank3 CinderSpikeBlossoms'     : { name: 'Cinder Spike Blossoms', icon: 'iconTreasurePod', zIndex: 50, hoverIcon: 'iconDecorCinderSpikeBlossoms' },
     'treasurePod Rank3 DashPad'                 : { name: 'Dash Pad', icon: 'iconTreasurePod', zIndex: 50, hoverIcon: 'iconGadgetDashPad' },
     'treasurePod Rank3 HappyStatue'             : { name: 'Happy Statue', icon: 'iconTreasurePod', zIndex: 50, hoverIcon: 'iconDecorHappyStatue' },
