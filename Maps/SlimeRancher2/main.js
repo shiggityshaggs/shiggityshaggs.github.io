@@ -38,7 +38,7 @@ const obj = new Object();
 
 function HoverHandler(evt) {
     //fc.clear();
-    obj.
+    obj = {};
     outArr.length = 0;
     
     map.forEachFeatureAtPixel(evt.pixel, feature => {
