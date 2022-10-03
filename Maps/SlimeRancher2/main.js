@@ -45,15 +45,24 @@ function HoverHandler(evt) {
     if (!fc.hasFeature(feature)) {
         fc.addFeature(feature);
         let props = feature.getProperties();
-        obj[props.itemName] = obj[props.itemName] == undefined ? 1 : obj[props.itemName] += 1;
+        if (props.itemName in obj) {
+            obj[props.itemName].count += 1
+        } else {
+            obj[props.itemName] = { itemIcon: props.itemIcon, count: 1 };
+        }
     }
     })
 
-    fc.forEachFeature(feature => {
-        let props = feature.getProperties();
-        let img = `<img class="hoverIcon" src="${IconPath}${props.itemIcon}.png">`
-        outArr.push(`<div>${img} ${props.itemName} ${obj[props.itemName]}</div>`);
-    });
+    for (o in obj) {
+        let img = `<img class="hoverIcon" src="${IconPath}${obj[o].itemIcon}.png">`
+        outArr.push(`<div>${img} ${o} ${obj[o].count}</div>`);
+    }
+
+    // fc.forEachFeature(feature => {
+    //     let props = feature.getProperties();
+    //     let img = `<img class="hoverIcon" src="${IconPath}${props.itemIcon}.png">`
+    //     outArr.push(`<div>${img} ${props.itemName} ${obj[props.itemName]}</div>`);
+    // });
     document.getElementById('list').innerHTML = outArr.join('');
 }
 
