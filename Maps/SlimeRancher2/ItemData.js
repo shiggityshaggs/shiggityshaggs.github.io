@@ -81,7 +81,7 @@ let ItemData = {
      'treeMango'        : { name: 'Mango', icon: 'iconFruitMango', zIndex: 100 },
      'treeMoonflower'   : { name: 'Moonflower', icon: 'iconCategoryNectar', zIndex: 100 },
     
-     'patchEmpty'   : { name: 'Empty Plot', icon: 'iconPatchEmpty', zIndex: 100 },
+     'patchEmpty'   : { name: 'Empty Plot', icon: 'iconPatchEmpty', zIndex: 50 },
      'patchCarrot'  : { name: 'Carrots', icon: 'iconVeggieCarrot', zIndex: 100 },
      'patchLettuce' : { name: 'Lettuce', icon: 'iconVeggieLettuce', zIndex: 100 },
     
