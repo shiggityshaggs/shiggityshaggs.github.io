@@ -49,16 +49,17 @@ function HoverHandler(evt) {
         if (props.itemName in obj) {
             obj[props.itemName].count += 1
         } else {
-            obj[props.itemName] = { itemIcon: props.itemIcon, count: 1 };
+            obj[props.itemName] = { itemIcon: props.itemIcon, count: 1, hoverIcon: props.hoverIcon ? props.hoverIcon : null };
         }
     }
     })
 
     for (o in obj) {
-        let img = `<img class="hoverIcon" src="${IconPath}${obj[o].itemIcon}.png">`
+        let img = `<img class="hoverIcon" src="${IconPath}${obj[o].itemIcon}.png">`;
         let name = `<span class="hoverName">${o}</span>`;
+        let hoverIcon = obj[o].hoverIcon ? `<img class="hoverIcon" src="${IconPath}${obj[o].hoverIcon}.png">` : '';
         let qty = obj[o].count > 1 ? `<span class="hoverCountX">x</span><span class="hoverCount">${obj[o].count}</span>` : '';
-        outArr.push(`<div class="hoverItem">${img} ${name} ${qty}</div>`);
+        outArr.push(`<div class="hoverItem">${img} ${name}${hoverIcon} ${qty}</div>`);
     }
 
     let l = document.getElementById('list');
