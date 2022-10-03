@@ -1,5 +1,6 @@
 const extent = [-1218.72688869863032,-1230.90601862152948,1220.07962325648305,1207.90049333358388];
 const divCoords = document.getElementById('coordinates');
+const hoverOffset = 5;
 
 let view = new ol.View({
     extent: extent,
@@ -62,8 +63,8 @@ function HoverHandler(evt) {
 
     let l = document.getElementById('list');
     l.innerHTML = outArr.join('');
-    l.style.top = `${evt.clientY + offset}px`;
-    l.style.left = `${evt.clientX + offset}px`;
+    l.style.top = `${evt.clientY + hoverOffset}px`;
+    l.style.left = `${evt.clientX + hoverOffset}px`;
 }
 
 window.addEventListener('load', () => {
