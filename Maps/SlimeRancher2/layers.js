@@ -93,7 +93,7 @@ function featureStyle(feature) {
         if (props.name.toLowerCase().startsWith(key.toLowerCase())) {
             props.itemName = ItemData[key].name;
             props.itemIcon = ItemData[key].icon;
-            props.hoverIcon = ItemData[key].hoverIcon;
+            props.hoverIcon = ItemData[key].hoverIcon ? ItemData[key].hoverIcon : null;
             props.zIndex = ItemData[key].zIndex;
         }
     }
