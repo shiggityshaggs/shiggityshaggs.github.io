@@ -28,14 +28,12 @@ let World = new ol.layer.Tile({
 
 let POI_Fields = new ol.layer.Vector({
     title: 'POI_Fields',
-    zIndex: zPOI,
-    visible: true,
     updateWhileAnimating: false,
     updateWhileInteracting: false,
-    postrender: console.log('POI.postrender'),
+    postrender: console.log('POI_Fields.postrender'),
     source: new ol.source.Vector({
         attributions: [ `` ],
-        featuresloadend: console.log('POI.featuresloadend'),
+        featuresloadend: console.log('POI_Fields.featuresloadend'),
         url: `./GeoJSON/POI_Fields.geojson`,
         format: new ol.format.GeoJSON({
             dataProjection:'pixels',
@@ -49,14 +47,12 @@ let POI_Fields = new ol.layer.Vector({
 
 let POI_Gorge = new ol.layer.Vector({
     title: 'POI_Gorge',
-    zIndex: zPOI,
-    visible: true,
     updateWhileAnimating: false,
     updateWhileInteracting: false,
-    postrender: console.log('POI.postrender'),
+    postrender: console.log('POI_Gorge.postrender'),
     source: new ol.source.Vector({
         attributions: [ `` ],
-        featuresloadend: console.log('POI.featuresloadend'),
+        featuresloadend: console.log('POI_Gorge.featuresloadend'),
         url: `./GeoJSON/POI_Gorge.geojson`,
         format: new ol.format.GeoJSON({
             dataProjection:'pixels',
@@ -70,14 +66,12 @@ let POI_Gorge = new ol.layer.Vector({
 
 let POI_Strand = new ol.layer.Vector({
     title: 'POI_Strand',
-    zIndex: zPOI,
-    visible: true,
     updateWhileAnimating: false,
     updateWhileInteracting: false,
-    postrender: console.log('POI.postrender'),
+    postrender: console.log('POI_Strand.postrender'),
     source: new ol.source.Vector({
         attributions: [ `` ],
-        featuresloadend: console.log('POI.featuresloadend'),
+        featuresloadend: console.log('POI_Strand.featuresloadend'),
         url: `./GeoJSON/POI_Strand.geojson`,
         format: new ol.format.GeoJSON({
             dataProjection:'pixels',
@@ -116,4 +110,5 @@ function featureStyle(feature) {
 let POI_Group = new ol.layer.Group({
     layers: [ POI_Fields, POI_Gorge, POI_Strand ],
     zIndex: zPOI,
+    attributions: [ `Can layergroups have attribs?` ],
 });
