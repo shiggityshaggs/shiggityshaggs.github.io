@@ -37,7 +37,7 @@ let outArr = new Array();
 let obj = new Object();
 
 function HoverHandler(evt) {
-    //fc.clear();
+    fc.clear();
     obj = {};
     outArr.length = 0;
     
