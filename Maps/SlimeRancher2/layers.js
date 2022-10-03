@@ -89,7 +89,7 @@ function featureStyle(feature) {
     props.zIndex = zFeatures;
 
     for (key in ItemData) {
-        if (props.name.startsWith(key)) {
+        if (props.name.toLowerCase().startsWith(key.toLowerCase())) {
             props.itemName = key;
             props.itemIcon = ItemData[key].icon;
             props.zIndex = ItemData[key].zIndex;
