@@ -88,13 +88,13 @@ function featureStyle(feature) {
     let icon = IconMissing;
     let zIndex = zFeatures;
 
-    // for (i in ItemData) {
-    //     let rx = new RegExp(i, 'i');
-    //     if (name.match(rx) != null) {
-    //         icon = ItemData[i].icon;
-    //         zIndex = ItemData[i].zIndex;
-    //     }
-    // }
+    for (i in ItemData) {
+        let rx = new RegExp(i, 'i');
+        if (name.match(rx) != null) {
+            icon = ItemData[i].icon;
+            zIndex = ItemData[i].zIndex;
+        }
+    }
 
     let style = new ol.style.Style({
         zIndex: zIndex,
