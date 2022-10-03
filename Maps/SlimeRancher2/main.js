@@ -60,7 +60,7 @@ function HoverHandler(evt) {
         let img = `<img class="hoverIcon" src="${IconPath}${props.icon}.png">`
         arr.push(`<div>${img}${props.name}</div>`);
     });
-    document.getElementById('list').innerHTML = arr.join('<br>');
+    document.getElementById('list').innerHTML = arr.join('');
 }
 
 window.addEventListener('load', () => {

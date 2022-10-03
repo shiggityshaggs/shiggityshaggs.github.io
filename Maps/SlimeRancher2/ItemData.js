@@ -88,7 +88,7 @@ let ItemData = {
      'Hive'     : { name: 'Bee Hive', icon: 'iconCraftWildHoney', zIndex: 100 },
      'Ore'       : { name: 'Ore', icon: 'lockedIcon', zIndex: 100 },
      'Spout'     : { name: 'Spout', icon: 'lockedIcon', zIndex: 100 },
-     'spoutSand'     : { name: 'Spout', icon: 'iconCraftSilkySand', zIndex: 100 },
-     'spoutOil'     : { name: 'Spout', icon: 'iconCraftPrimordyOil', zIndex: 100 },
-     'spoutBrine'     : { name: 'Spout', icon: 'iconCraftDeepBrine', zIndex: 100 },
+     'spoutSand'     : { name: 'Silky Sand', icon: 'iconCraftSilkySand', zIndex: 100 },
+     'spoutOil'     : { name: 'Primordial Oil', icon: 'iconCraftPrimordyOil', zIndex: 100 },
+     'spoutBrine'     : { name: 'Brine', icon: 'iconCraftDeepBrine', zIndex: 100 },
     }
