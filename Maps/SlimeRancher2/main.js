@@ -32,36 +32,35 @@ map.on('pointermove', evt => {
 let featureCollection = new ol.layer.Vector({
     source: new ol.source.Vector()
 });
+const fc = featureCollection.getSource();
+const outArr = new Array();
+const obj = new Object();
 
 function HoverHandler(evt) {
-    let fc = featureCollection.getSource();
-    fc.clear();
-
-    map.forEachFeatureAtPixel(evt.pixel, (feature => {
-    if (!fc.hasFeature(feature)) {
-        // let props = feature.getProperties();
-        // let name = props.name;
-
-        // for (key in ItemData) {
-        //     if (name.startsWith(key)) {
-        //         props.name = ItemData[key].name;
-        //         props.icon = ItemData[key].icon;
-        //     }
-        // }
-
-        // feature.setProperties(props);
-        fc.addFeature(feature);
-    }
-    }))
-
-    let arr = new Array();
-    fc.forEachFeature(feature => {
+    //fc.clear();
+    obj.
+    outArr.length = 0;
+    
+    map.forEachFeatureAtPixel(evt.pixel, feature => {
+    // if (!fc.hasFeature(feature)) {
+        // fc.addFeature(feature);
         let props = feature.getProperties();
-        let name = props.itemName == undefined ? props.name : props.itemName;
+        obj[props.itemName] = obj[props.itemName] == undefined ? 1 : obj[props.itemName]++;
+    // }
+    })
+
+    for (o in obj) {
+        let props = feature.getProperties();
         let img = `<img class="hoverIcon" src="${IconPath}${props.itemIcon}.png">`
-        arr.push(`<div>${img}${name}</div>`);
-    });
-    document.getElementById('list').innerHTML = arr.join('');
+        outArr.push(`<div>${img} ${props.itemName} ${obj[o]}</div>`);
+        delete obj[o];
+    }
+
+
+    // fc.forEachFeature(feature => {
+
+    // });
+    document.getElementById('list').innerHTML = outArr.join('');
 }
 
 window.addEventListener('load', () => {

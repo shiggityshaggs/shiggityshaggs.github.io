@@ -85,6 +85,7 @@ let POI_Strand = new ol.layer.Vector({
 
 function featureStyle(feature) {
     let props = feature.getProperties();
+    props.itemName = props.name;
     props.itemIcon = IconMissing;
     props.zIndex = zFeatures;
 
