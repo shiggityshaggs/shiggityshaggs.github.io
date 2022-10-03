@@ -26,6 +26,11 @@ let World = new ol.layer.Tile({
     })
 });
 
+let POI_Group = new ol.layer.Group({
+    layers: [ POI_Fields, POI_Gorge, POI_Strand ],
+    zIndex: zPOI,
+});
+
 let POI_Fields = new ol.layer.Vector({
     title: 'POI_Fields',
     zIndex: zPOI,
