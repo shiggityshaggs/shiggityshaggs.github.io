@@ -33,8 +33,8 @@ let featureCollection = new ol.layer.Vector({
     source: new ol.source.Vector()
 });
 const fc = featureCollection.getSource();
-const outArr = new Array();
-const obj = new Object();
+let outArr = new Array();
+let obj = new Object();
 
 function HoverHandler(evt) {
     //fc.clear();
