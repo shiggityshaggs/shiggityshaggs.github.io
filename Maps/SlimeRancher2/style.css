@@ -56,7 +56,17 @@ html, body {
     left: 0%;
     top: 0%;
     width: max-content;
-    height: fit-content;
+    /* height: fit-content; */
+	padding: 2px;
+}
+
+.hoverItem {
+	display: block;
+	border-radius: 10px;
+	text-shadow: 2px 2px #000;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: fit-content;
+	padding-right: 5px;
 }
 
 .hoverIcon {
@@ -64,11 +74,11 @@ html, body {
 }
 
 .hoverName {
-    color: #0099FF;
+    color: #FFF;
 }
 
 .hoverCount {
-    color: #FF9900;
+    color: #0099FF;
 }
 
 .hoverCountX {

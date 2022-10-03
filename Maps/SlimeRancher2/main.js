@@ -57,15 +57,13 @@ function HoverHandler(evt) {
         let img = `<img class="hoverIcon" src="${IconPath}${obj[o].itemIcon}.png">`
         let name = `<span class="hoverName">${o}</span>`;
         let qty = obj[o].count > 1 ? `<span class="hoverCountX">x</span><span class="hoverCount">${obj[o].count}</span>` : '';
-        outArr.push(`<div>${img} ${name} ${qty}</div>`);
+        outArr.push(`<div class="hoverItem">${img} ${name} ${qty}</div>`);
     }
 
-    // fc.forEachFeature(feature => {
-    //     let props = feature.getProperties();
-    //     let img = `<img class="hoverIcon" src="${IconPath}${props.itemIcon}.png">`
-    //     outArr.push(`<div>${img} ${props.itemName} ${obj[props.itemName]}</div>`);
-    // });
-    document.getElementById('list').innerHTML = outArr.join('');
+    let l = document.getElementById('list');
+    l.innerHTML = outArr.join('');
+    l.style.top = `${evt.clientY + offset}px`;
+    l.style.left = `${evt.clientX + offset}px`;
 }
 
 window.addEventListener('load', () => {
