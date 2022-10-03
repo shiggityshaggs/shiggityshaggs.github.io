@@ -1,7 +1,7 @@
 const zWorld = 5;
 const zPOI = 10;
 const zFeatures = 15;
-const IconPath = './Images/Icons_128/';
+const IconPath = './Icons/';
 const IconMissing = 'unknownIcon';
 
 let World = new ol.layer.Tile({
