@@ -90,6 +90,7 @@ function featureStyle(feature) {
 
     for (key in ItemData) {
         if (props.name.startsWith(key)) {
+            console.log(props.name);
             props.itemName = key;
             props.itemIcon = ItemData[key].hasOwnProperty('itemIcon') ? ItemData[key].icon : IconMissing;
             props.zIndex = ItemData[key].zIndex;
