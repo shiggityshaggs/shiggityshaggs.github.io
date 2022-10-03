@@ -66,6 +66,7 @@ function HoverHandler(evt) {
     l.innerHTML = outArr.join('');
     l.style.top = `${evt.clientY + hoverOffset}px`;
     l.style.left = `${evt.clientX + hoverOffset}px`;
+    console.log(`${evt.clientX} ${evt.clientY}`);
 }
 
 window.addEventListener('load', () => {
