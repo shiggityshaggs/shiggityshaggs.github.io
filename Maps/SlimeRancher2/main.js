@@ -45,7 +45,7 @@ function HoverHandler(evt) {
     if (!fc.hasFeature(feature)) {
         fc.addFeature(feature);
         let props = feature.getProperties();
-        obj[props.itemName] = obj[props.itemName] == undefined ? 1 : obj[props.itemName]++;
+        obj[props.itemName] = obj[props.itemName] == undefined ? 1 : obj[props.itemName] += 1;
     }
     })
 

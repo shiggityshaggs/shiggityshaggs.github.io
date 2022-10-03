@@ -10,7 +10,7 @@ let World = new ol.layer.Tile({
     updateWhileAnimating: true,
     updateWhileInteracting: true,
     source: new ol.source.TileImage({
-        attributions: ``,
+        attributions: [],
         tileGrid: new ol.tilegrid.TileGrid({
             extent: [-1218.72688869863032,-1230.90601862152948,1220.07962325648305,1207.90049333358388],
             origin: [-1218.72688869863032,-1230.90601862152948],
@@ -32,7 +32,7 @@ let POI_Fields = new ol.layer.Vector({
     updateWhileInteracting: false,
     postrender: console.log('POI_Fields.postrender'),
     source: new ol.source.Vector({
-        attributions: [ `` ],
+        attributions: [ ],
         featuresloadend: console.log('POI_Fields.featuresloadend'),
         url: `./GeoJSON/POI_Fields.geojson`,
         format: new ol.format.GeoJSON({
@@ -51,7 +51,7 @@ let POI_Gorge = new ol.layer.Vector({
     updateWhileInteracting: false,
     postrender: console.log('POI_Gorge.postrender'),
     source: new ol.source.Vector({
-        attributions: [ `` ],
+        attributions: [],
         featuresloadend: console.log('POI_Gorge.featuresloadend'),
         url: `./GeoJSON/POI_Gorge.geojson`,
         format: new ol.format.GeoJSON({
@@ -70,7 +70,7 @@ let POI_Strand = new ol.layer.Vector({
     updateWhileInteracting: false,
     postrender: console.log('POI_Strand.postrender'),
     source: new ol.source.Vector({
-        attributions: [ `` ],
+        attributions: [],
         featuresloadend: console.log('POI_Strand.featuresloadend'),
         url: `./GeoJSON/POI_Strand.geojson`,
         format: new ol.format.GeoJSON({
