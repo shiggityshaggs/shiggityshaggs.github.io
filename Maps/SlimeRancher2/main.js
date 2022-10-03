@@ -64,8 +64,8 @@ function HoverHandler(evt) {
 
     let l = document.getElementById('list');
     l.innerHTML = outArr.join('');
-    l.style.top = `${evt.pixel[0] + hoverOffset}px`;
-    l.style.left = `${evt.pixel[1] + hoverOffset}px`;
+    l.style.left = `${evt.pixel[0] + hoverOffset}px`;
+    l.style.top = `${evt.pixel[1] + hoverOffset}px`;
 }
 
 window.addEventListener('load', () => {
