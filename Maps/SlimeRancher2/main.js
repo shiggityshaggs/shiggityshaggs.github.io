@@ -39,17 +39,17 @@ function HoverHandler(evt) {
 
     map.forEachFeatureAtPixel(evt.pixel, (feature => {
     if (!fc.hasFeature(feature)) {
-        let props = feature.getProperties();
-        let name = props.name;
+        // let props = feature.getProperties();
+        // let name = props.name;
 
-        for (key in ItemData) {
-            if (name.startsWith(key)) {
-                props.name = ItemData[key].name;
-                props.icon = ItemData[key].icon;
-            }
-        }
+        // for (key in ItemData) {
+        //     if (name.startsWith(key)) {
+        //         props.name = ItemData[key].name;
+        //         props.icon = ItemData[key].icon;
+        //     }
+        // }
 
-        feature.setProperties(props);
+        // feature.setProperties(props);
         fc.addFeature(feature);
     }
     }))
@@ -57,8 +57,8 @@ function HoverHandler(evt) {
     let arr = new Array();
     fc.forEachFeature(feature => {
         let props = feature.getProperties();
-        let img = `<img class="hoverIcon" src="${IconPath}${props.icon}.png">`
-        arr.push(`<div>${img}${props.name}</div>`);
+        let img = `<img class="hoverIcon" src="${IconPath}${props.itemIcon}.png">`
+        arr.push(`<div>${img}${props.itemName}</div>`);
     });
     document.getElementById('list').innerHTML = arr.join('');
 }

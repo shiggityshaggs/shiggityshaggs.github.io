@@ -84,21 +84,24 @@ let POI_Strand = new ol.layer.Vector({
 });
 
 function featureStyle(feature) {
-    let name = feature.get('name');
-    let icon = IconMissing;
-    let zIndex = zFeatures;
+    let props = feature.getProperties();
+    props.itemIcon = IconMissing;
+    props.zIndex = zFeatures;
 
     for (key in ItemData) {
-        if (name.startsWith(key)) {
-            icon = ItemData[key].icon;
-            zIndex = ItemData[key].zIndex;
+        if (props.name.startsWith(key)) {
+            props.itemName = key;
+            props.itemIcon = ItemData[key].icon;
+            props.zIndex = ItemData[key].zIndex;
         }
     }
 
+    feature.setProperties(props);
+
     let style = new ol.style.Style({
-        zIndex: zIndex,
+        zIndex: props.zIndex,
         image: new ol.style.Icon({
-            src: `${IconPath}${icon}.png`,
+            src: `${IconPath}${props.itemIcon}.png`,
             scale: 0.2,
             opacity: 0.8,
         })
@@ -107,7 +110,6 @@ function featureStyle(feature) {
 }
 
 let POI_Group = new ol.layer.Group({
-    layers: [ POI_Fields, POI_Gorge, POI_Strand ],
+    layers: [ POI_Fields ], //, POI_Gorge, POI_Strand ],
     zIndex: zPOI,
-    attributions: [ `Can layergroups have attribs?` ],
 });
