@@ -114,7 +114,8 @@ let ItemData = {
      'patchCarrot'  : { name: 'Carrots', icon: 'iconVeggieCarrot', zIndex: 100 },
      'patchLettuce' : { name: 'Lettuce', icon: 'iconVeggieLettuce', zIndex: 100 },
     
-     'resourceNodeSpawnerHive'         : { name: 'Bee Hive', icon: 'iconCraftWildHoney', zIndex: 100 },
+     'resourceNodeSpawnerHive'         : { name: 'Beehive', icon: 'iconCraftWildHoney', zIndex: 100 },
+     'resourceNodeSpawnerOre Cave'     : { name: 'Ore Cave', icon: 'iconCraftStrangeDiamond', zIndex: 100 },
      'resourceNodeSpawnerOre'          : { name: 'Ore', icon: 'lockedIcon', zIndex: 100 },
      'resourceNodeSpawnerSpout'        : { name: 'Spout', icon: 'lockedIcon', zIndex: 100 },
      'spoutSand'    : { name: 'Silky Sand', icon: 'iconCraftSilkySand', zIndex: 100 },
