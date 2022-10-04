@@ -99,7 +99,8 @@ let ItemData = {
      'slimeSpawn:Flutter'   : { name: 'Slime Spawn: Flutter', icon: 'iconSlimeFlutter', zIndex: 100 },
      'nodeRingtailSpawnLoc' : { name: 'Slime Spawn: Ringtail', icon: 'iconSlimeRingtail', zIndex: 100 },
     
-     'Rainbow Activation'   : { name: 'Portal Activation', icon: 'iconSSWarpTech', zIndex: 150 },
+     'portalActivation'     : { name: 'Portal Activation', icon: 'iconSSWarpTech', zIndex: 150 },
+     'portalPortal'         : { name: 'Portal', icon: 'iconSSWarpTech', zIndex: 150 },
      'researchDrone'        : { name: 'Research Drone', icon: 'iconDrone', zIndex: 150 },
      'nodeMapEntry'         : { name: 'Reveal Map', icon: 'iconChromaPack_26', zIndex: 150 },
      'gadgetRefineryLink'   : { name: 'Gadget: Refinery Link', icon: 'iconRefineryLink', zIndex: 150 },
@@ -113,10 +114,10 @@ let ItemData = {
      'patchCarrot'  : { name: 'Carrots', icon: 'iconVeggieCarrot', zIndex: 100 },
      'patchLettuce' : { name: 'Lettuce', icon: 'iconVeggieLettuce', zIndex: 100 },
     
-     'Hive'     : { name: 'Bee Hive', icon: 'iconCraftWildHoney', zIndex: 100 },
-     'Ore'       : { name: 'Ore', icon: 'lockedIcon', zIndex: 100 },
-     'Spout'     : { name: 'Spout', icon: 'lockedIcon', zIndex: 100 },
-     'spoutSand'     : { name: 'Silky Sand', icon: 'iconCraftSilkySand', zIndex: 100 },
+     'resourceNodeSpawnerHive'         : { name: 'Bee Hive', icon: 'iconCraftWildHoney', zIndex: 100 },
+     'resourceNodeSpawnerOre'          : { name: 'Ore', icon: 'lockedIcon', zIndex: 100 },
+     'resourceNodeSpawnerSpout'        : { name: 'Spout', icon: 'lockedIcon', zIndex: 100 },
+     'spoutSand'    : { name: 'Silky Sand', icon: 'iconCraftSilkySand', zIndex: 100 },
      'spoutOil'     : { name: 'Primordial Oil', icon: 'iconCraftPrimordyOil', zIndex: 100 },
-     'spoutBrine'     : { name: 'Brine', icon: 'iconCraftDeepBrine', zIndex: 100 },
+     'spoutBrine'   : { name: 'Brine', icon: 'iconCraftDeepBrine', zIndex: 100 },
     }
