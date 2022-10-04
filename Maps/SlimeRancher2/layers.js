@@ -83,12 +83,12 @@ let POI_Strand = new ol.layer.Vector({
     }
 });
 
-let s = POI_Strand.getSource();
-let c = 0;
-s.forEachFeature(x => {
-    c++;
-});
-console.log(c);
+// let s = POI_Strand.getSource();
+// let c = 0;
+// s.forEachFeature(x => {
+//     c++;
+// });
+// console.log(c);
 
 function featureStyle(feature) {
     let props = feature.getProperties();
