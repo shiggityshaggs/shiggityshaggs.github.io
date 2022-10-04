@@ -91,7 +91,7 @@ let ItemData = {
     'treasurePod Rank3 WarpDepotGrey'           : { name: 'Warp Depot Grey', icon: 'iconTreasurePod', zIndex: 50, hoverIcon: 'iconGadgetWarpDepotGrey' },
     
      'gordo'                : { name: 'Gordo: ???', icon: 'iconGordoPink', zIndex: 150 },
-     'nodeSlimeGold'        : { name: 'Slime Spawn: Gold', icon: 'iconSlimeGold', zIndex: 100 },
+     'slimeGold'        : { name: 'Slime Spawn: Gold', icon: 'iconSlimeGold', zIndex: 100 },
      'slimeSpawn:Puddle'    : { name: 'Slime Spawn: Puddle', icon: 'iconSlimePuddle', zIndex: 100 },
      'slimeSpawn:Angler'    : { name: 'Slime Spawn: Angler', icon: 'iconSlimeAngler', zIndex: 100 },
      'slimeSpawn:Feral'     : { name: 'Slime Spawn: Feral', icon: 'iconFeralPedia', zIndex: 100 },
